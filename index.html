@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lessons</title>
+</head>
+<body> <!-- <br> нужен для преноса на другую строку, <hr> нужен для разделения линией заголовков -->
+    <header></header> <!-- Шапка страницы -->
+    <aside>Реклама</aside> <!-- разметка блока не имеющего отношения к основному тексту, реклама-->
+    <main>
+        <section></section> <!--Деление страницы(данной части) на более мелкие части-->
+        <article></article> <!--нужен для создания статей в блоге и новостных страниц-->
+    </main> <!-- Основное содержимое страницы -->
+    
+    <footer></footer> <!-- самая нижня часть страниицы - подвалб, там контакты адреса и прочая информация -->
+    <h1>Дракон <!--картинка с ссылкой и с взятием с внутреннего файла разработчика-->
+        <br>
+        <a href="http://google.com">
+        <img src="./images/dragon.jpg" alt="">
+        </a>
+        <hr>
+    </h1>
+    <div></div> <!-- отдельный блок контента нужен для отдления содержимого страницы без конкретного значнения, где угодно -->
+    <span></span> <!-- Пустой блок контента для текстового элемента -->
+    <p>Прекрасный 
+        <br>мир</p>
+        <hr>
+    <h2> <!--Списки-->
+
+
+    <ul> <!--маркированный список, только тег li - текстовый формат-->
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+
+    <ol> <!-- нумерованный список, только тег li - текстовый формат-->
+        <li>text</li> <!--только внутри li мы можем определить div, a href  и т.д. а также вложить один список в другой-->
+        <li>text</li>
+        <li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </li>
+    </ol>
+
+    <dl> <!--список определний-->
+        <dt>Стоимость </dt><!--свойтва и значения-->
+        <dd>40 тыс руб</dd>
+
+        <dt>Стоимость </dt><!--свойтва и значения-->
+        <dd>40 тыс руб</dd>
+
+        <dt>Стоимость </dt><!--свойтва и значения-->
+        <dd>40 тыс руб</dd>
+
+    </dl>
+    </h2>
+    <!--Таблицы-->
+    <h3>
+        <!--border, чтобы таблица была как настоящая, это граница её надо задавать в CSS-->
+        <table border="1">
+            <!-- описание таблицы-->
+            <caption>Меню</caption>
+            <thead>
+                <!--строка талицы-->
+                <tr>
+                    <!--ячейки таблицы-->
+                    <th> Наименование</th>
+                    <th>Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--ячейка-->
+                    <td>чай</td>
+                    <td>1$</td>
+                </tr>
+                <tr>
+                    <!--ячейка-->
+                    <td>кофе</td>
+                    <td>2$</td>
+                </tr>
+                <tr>
+                    <!--ячейка-->
+                    <td>морс</td>
+                    <td>1$</td>
+                </tr>
+
+            </tbody>
+            <!--подвал таблицы-->
+            <tfoot>
+                <tr>
+                    <!--colspan для объединения ячеек в данном случае по горизонтали, rowspan - по вертикали-->
+                    <td colspan="2">
+                        3
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </h3>
+    <!--Формы страницы-->
+    <h4>
+        <!-- Добавляет функциональность вложенным в него тегам ввода-->
+        <form action="">
+            <!-- Для красоты формы fieldset - для группирует поля формы, legend - заголовок группы полей-->
+            <fieldset>
+                <legend>User data</legend>
+    
+            <!-- Поле для формы пользовательского ввода-->
+            <div>
+                Name:
+                <input type="text" name="name" placeholder="Type your name" required>
+            </div>
+            <div>
+                Password:
+                <input type="password" disabled>
+            </div>
+            <div>
+                Age:
+                <input type="number" value="50" min="10" max="90" step="1.5">
+            </div>
+            <div>
+                Email:
+                <input type="email" minlength="3" maxlength="39" required>
+            </div>
+            <div>
+                Agree with rules:
+                <input type="checkbox" checked>
+            </div>
+            <div>
+                Gender:
+                <!-- label нужен чтобы тыкать не только по ячейке но и по самому названию-->
+                <label>
+                    <!-- Для связи между контролам нужен одинаковый name, он нужен везде-->
+                    Male <input type="radio" name="gender" checked>
+                </label>
+                <label>
+                    Female <input type="radio" name="gender" checked>
+                </label>
+            </div>
+            <div>
+                <!--select для выбора нескольких значений из списка (option)-->
+                <select name="plan" id="" multiple></select>
+                    <option disabled value="plan1">1</option>
+                    <option selected value="plan2">2</option>
+                    <option value="plan3">3</option>
+            </div>
+            <div>
+                <!--Поле для отправки большого комментария(поле можно менять за угол), col и row вместе с CSS для высоты и длины-->
+                <textarea name="" id=""></textarea>
+            </div>
+            <input type="button" value="Кнопка">
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Сброс">
+            <!-- название file изменить нельзя так как системная инфа-->
+            <input type="file">
+        </fieldset>
+        </form>
+    </h4>
+    <h5><!--Стили и скрипты-->
+            <!--CSS тут пишем-->
+            <style>
+                   
+            </style>
+            <!--Внешние стили, таблица стилей-->
+            <link rel="stylesheet" href="">
+            <body>
+                <script>
+                    
+                </script>
+            </body>
+    </h5>
+    <h6>Заголовок 2</h6> <!-- работа с текстом, индексы, степени, отображение текста, ссылки, картинки с сайтов и оформления их-->
+    <i>курсив</i>
+    <b>жирный текст</b>
+    <em>курсив</em> <!-- Ключевые слова на странице Em,strong-->
+    <strong>жирный</strong>
+    <br>
+    H<sub>2</sub>O <!--sub - индекс элемента-->
+    <br>
+    D= b<sup>2</sup> - 4ac <!--степень числа-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Natus sed aliquam fugiat dolorum unde error magni delectus dolorem cupiditate neque
+          reprehenderit voluptatibus vero beatae minus nulla, quaerat, consequuntur cum similique?</p>
+          <pre> <!--отображет текст на странице также как и в коде-->
+            ку 
+                        ку      
+                                    ку
+          </pre>
+          <nav> <!--навигационное меню для ссылок-->
+          <a href="http://google.com" target="_blank">google</a> <!--target = "_blank" - открывает пользователю ещё одну страницу с гугл-->
+          <a href="./blog.html">ссылка на блог</a>
+        </nav>
+        <figcaption>Cute</figcaption>
+        <figure> <!--Сематический тег который автоматический добавляет отступы для красоты оформления-->
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/4355093/pub_63fd6de472051e06a19acf7d_63ffddf7f4703b15ca3409c6/scale_1200" alt=""> <!-- для вставки картинки на веб страницу src = адрес картинки, alt = что показывать если картинка не загрузилась или отсутствует-->
+        </figure>
+        Привет!
+</body>
+</html>
